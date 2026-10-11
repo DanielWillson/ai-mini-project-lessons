@@ -4,7 +4,7 @@
 
 **You need:** your AI coding agent ([see the setup guide](../../SETUP.md)), your `LEARNING_LOG.md` from Project 5, the hosting account you used in Project 2, and an idea (a rough one is fine). During the session you'll make a free Stripe account yourself. You shouldn't need a credit card, and no real money moves unless you later decide it should.
 
-**You'll leave with:** a live one-page site for your own idea that takes a refundable deposit (tested with fake money), a plan for who sees it first and what result counts as a yes, and a working understanding of positioning, calls to action, pricing, unit economics, and outreach.
+**You'll leave with:** a live one-page site for your own idea that takes a refundable deposit (tested with fake money), a plan for who sees it first and what result counts as a yes, and a working understanding of positioning, value propositions, calls to action (CTAs), conversion rates, unit economics, customer acquisition cost (CAC), and validation: the vocabulary founders, marketers, and investors use, long before AI.
 
 ## What happens
 
@@ -12,12 +12,12 @@ This is the last project, and the AI steps back. You lead; it coaches. You'll:
 
 1. Hear how a course sold $7,000 of seats before it existed, then choose an idea starting from what you already have.
 2. Confirm your own permission mode and defend the choice.
-3. Write down what "done" means twice: for the page, and for the test itself, including how many deposits count as a yes, before anyone sees it.
-4. Work out a price and a back-of-envelope version of whether it's worth doing.
+3. Write down what "done" means twice: for the page, and for the test itself, including how many deposits count as a yes (your target conversion rate), before anyone sees it.
+4. Work out a price and back-of-envelope unit economics: does one sale make money?
 5. Set up a deposit button in Stripe's sandbox, where payments are pretend.
-6. Write the build brief yourself, decide who builds it, and deploy it.
+6. Write the build brief yourself, decide whether a subagent builds it, and deploy it.
 7. Find a problem the AI plants in your live site.
-8. Check the page yourself, then have a skeptical "customer" agent tell you why they wouldn't pay, and decide which objections matter.
+8. Check the page yourself, then have a reviewer agent play a skeptical customer and tell you why they wouldn't pay, and decide which objections matter.
 9. Plan your first 20 people, and decide whether to go live with real money.
 10. Look back across all six projects in your learning log.
 

@@ -4,19 +4,19 @@
 
 **You need:** an AI coding agent such as Claude Code or Codex, set up ([see the setup guide](../../SETUP.md)). Nothing else.
 
-**You'll leave with:** a small game that runs in your browser, and a working understanding of the terminal, files, if statements, loops, git, acceptance criteria, handing work to an AI helper, and checking work you didn't do yourself.
+**You'll leave with:** a small game that runs in your browser, and a working understanding of the terminal, files, if statements, loops, git, acceptance criteria, handing work to another AI agent, and checking work you didn't do yourself. You'll also pick up the words real teams use: commit, repo, spec, bug, QA.
 
 ## What happens
 
 The AI starts by asking you a few quick questions about what you already know, so the lesson fits you. Then you'll:
 
 1. Look around your computer from the terminal.
-2. Write down what "done" means for your game before anything gets built.
-3. Set up git so you can always go back.
-4. Watch the AI hand the build to a helper agent, and see why that's how good managers work.
+2. Write down what "done" means for your game before anything gets built. Product teams call these acceptance criteria.
+3. Set up git and make your first commit, so you can always go back.
+4. Watch the AI hand the build to a subagent (a second agent it starts), and see why that's how good managers work.
 5. Change the game yourself, by asking and by hand.
 6. Break it on purpose and learn to read the error.
-7. Check the game against your definition of done, then have a skeptical second agent try to find what you missed.
+7. Check the game against your definition of done, then have a reviewer agent try to find what you missed.
 8. Write down what you learned, in your own words.
 
 Expect to be asked to guess what will happen, and to explain ideas back. That's the point. If you just want a game, ask the AI for one in a sentence; this project is about understanding how it's built.

@@ -4,7 +4,7 @@
 
 **You need:** an AI coding agent such as Claude Code or Codex ([setup guide](../../SETUP.md)), your `LEARNING_LOG.md` from Project 2 (it's still in your `my-game` folder), and an email address for a free API account, which you'll make yourself during the lesson. On Windows, you may also need to install Python; the AI walks you through it.
 
-**You'll leave with:** a small program that watches a public data source for things you care about, and a working understanding of APIs, requests and responses, status codes, JSON, API keys, keeping secrets out of git, reading documentation, and scoping a first version.
+**You'll leave with:** a small program that watches a public data source for things you care about, and a working understanding of APIs, requests and responses, status codes, JSON, API keys, keeping secrets out of git, reading documentation, and scoping a first version, plus the names teams use for them.
 
 ## Pick what to watch
 
@@ -21,13 +21,13 @@ The AI starts by reading your learning log so it can pick up where Project 2 lef
 
 1. Choose your track and write your private watchlist.
 2. Look at a real API response in your own web browser and learn to read it.
-3. Send a helper agent to read a long set of documentation, then check what its summary left out.
-4. Cut your idea down to a first version and write down what "done" means.
-5. Set up git so your secrets can't end up in it.
+3. Send a subagent (a second AI agent the main one starts) to read a long set of documentation, then check what its summary left out.
+4. Cut your idea down to a first version (an MVP, minimum viable product) and write its acceptance criteria: what "done" means.
+5. Set up your git repo so your secrets can't end up in a commit.
 6. Turn on the sandbox, see what it blocks, and move to auto mode.
 7. Get your own API key and paste it into a hidden settings file yourself. The AI walks you through it, step by step for Mac or Windows.
 8. Build the watcher, run it yourself, then read its Python one small piece at a time. Then break it on purpose with a wrong key.
-9. Check it yourself, then have a reviewer hunt for any way your key could leak.
+9. Check it yourself, then have a reviewer agent hunt for any way your key could leak.
 10. Write down what you learned, in your own words.
 
 ## How to start

@@ -35,12 +35,12 @@ Each project takes about 90 minutes to 2 hours and leaves you with a `LEARNING_L
 | # | Project | You'll learn | Status |
 |---|---|---|---|
 | 0 | [Get set up](SETUP.md) | Installing an AI coding agent, opening a terminal | Ready |
-| 1 | [Make a game](projects/01-make-a-game/) | Terminal, files, if statements, loops, git, acceptance criteria, handing work to an AI helper, adversarial verification | Ready |
-| 2 | [Put it online](projects/02-put-it-online/) | Your computer vs. the cloud, deploying, domains, GitHub, turning user feedback into a plan | Draft, untested |
-| 3 | [Build a watcher, part 1](projects/03-build-a-watcher-1/) (concerts or class actions) | APIs, JSON, API keys, keeping secrets safe, reading docs, turning on the sandbox | Draft, untested |
-| 4 | [Build a watcher, part 2](projects/04-build-a-watcher-2/) | Databases, "what's new" alerts, scheduled jobs, context windows and AI memory, running a team of AI agents | Draft, untested |
-| 5 | [Grocery cart over MCP](projects/05-grocery-cart-mcp/) | A real Instacart cart for your week of meals. How agents connect to tools (MCP), signing in with OAuth, permissions, prompt injection, when a human must approve | Draft, untested |
-| 6 | [Sell something before you build it](projects/06-sell-before-you-build/) | Landing pages, pricing, marketing, sales, unit economics | Draft, untested |
+| 1 | [Make a game](projects/01-make-a-game/) | Terminal, files, if statements, loops, git and commits, acceptance criteria, delegating to subagents, adversarial review | Ready |
+| 2 | [Put it online](projects/02-put-it-online/) | Your computer vs. the cloud, deploying, domains, GitHub, turning user feedback into a plan | Ready |
+| 3 | [Build a watcher, part 1](projects/03-build-a-watcher-1/) (concerts or class actions) | APIs, JSON, API keys, keeping secrets safe, reading docs, turning on the sandbox | Ready |
+| 4 | [Build a watcher, part 2](projects/04-build-a-watcher-2/) | Databases, "what's new" alerts, scheduled jobs, context windows and AI memory, running a team of AI agents | Ready |
+| 5 | [Grocery cart over MCP](projects/05-grocery-cart-mcp/) | A real Instacart cart for your week of meals. How agents connect to tools (MCP), signing in with OAuth, permissions, prompt injection, when a human must approve | Ready |
+| 6 | [Sell something before you build it](projects/06-sell-before-you-build/) | Landing pages, pricing, marketing, sales, unit economics | Ready |
 
 Do them in order. Each one builds on the last.
 
@@ -50,7 +50,7 @@ Do them in order. Each one builds on the last.
 
 Whoever built something is the worst person to check it, because they check what they *meant* to build. AI has the same problem: ask an agent "did that work?" and it will usually say yes.
 
-So in every project, **you** verify the result against a definition of done you wrote before building started. The AI is told not to declare the work finished. Then a second AI agent, one that didn't see the build, gets the explicit job of finding what's wrong. This is called **adversarial verification**. Some of its findings will be real and some won't, so you check those too.
+So in every project, **you** verify the result against **acceptance criteria** you wrote before building started. The AI is told not to declare the work finished. Then a second AI agent, one that didn't see the build, gets the explicit job of finding what's wrong. This is called **adversarial verification**. Some of its findings will be real and some won't, so you check those too.
 
 Businesses do this all the time: auditors are separate from accountants, testers are separate from developers, and big payments need a second signature.
 
@@ -58,9 +58,9 @@ Businesses do this all the time: auditors are separate from accountants, testers
 
 An AI agent has a limited working memory, called its **context window**. If one agent does every task itself, its memory fills with details and it loses the big picture, like a manager who does all the work personally.
 
-The better pattern is **orchestration**: one agent stays in charge, writes clear briefs, hands the building to helper agents (often faster, cheaper models), and checks what comes back. You'll see this from Project 1 onward, and learn when it's worth it and when it's faster to just do the job yourself.
+The better pattern is **orchestration**: one agent stays in charge, writes clear briefs, hands the building to **subagents** (often faster, cheaper models), and checks what comes back. You'll see this from Project 1 onward, and learn when it's worth it and when it's faster to just do the job yourself.
 
-Writing a good brief for a helper agent is the same skill as writing requirements for a human team, or a good prompt.
+Writing a good brief for a subagent is the same skill as writing a good ticket for a human team, or a good prompt.
 
 ### 3. Decide what your agent is allowed to do on its own.
 
@@ -75,6 +75,9 @@ It's like a new employee. In their first week, their manager reviews every expen
 **Will using AI like this make me dumber?**
 It can, if you let it do your thinking. These projects are built the other way around. You predict before anything runs, you explain ideas back in your own words, you read errors yourself, and you're the one who decides whether the work is done. The AI is told to keep those check-ins even if you ask it to skip them.
 
+**Why all the jargon?**
+You'll learn the words real teams use: commit, repo, deploy, acceptance criteria, user story, backlog, MVP, API, unit economics. Each one starts in plain English, then gets its real name. Most of these aren't AI words at all. Product managers, engineers, designers, and testers have used them for decades, in tickets, meetings, and job postings. Knowing them makes you useful on a team from your first day, and they're also the clearest way to tell an AI what you want.
+
 **Do I need to know how to code?**
 No. You'll read some code and change a little by hand, but the point is understanding, not syntax.
 
@@ -82,13 +85,13 @@ No. You'll read some code and change a little by hand, but the point is understa
 The projects use free tools wherever possible. The AI agent is the one real cost: most need a paid plan, usually about $20 a month, though some have free tiers or student offers. See [the setup guide](SETUP.md) for options.
 
 **What if I break something?**
-You will, on purpose, in every project. Each project stays inside its own folder, and from Project 1 on you'll use git save points so you can always go back. Early on, your agent asks permission before running commands or changing files; read those requests before saying yes. Later it works inside a sandbox your computer enforces.
+You will, on purpose, in every project. Each project stays inside its own folder, and from Project 1 on you'll use git commits (save points) so you can always go back. Early on, your agent asks permission before running commands or changing files; read those requests before saying yes. Later it works inside a sandbox your computer enforces.
 
 **Mac or Windows?**
 Either. The AI asks which you're using and adjusts its instructions.
 
 **Which AI tool do I need?**
-Any major AI coding agent that works in a folder on your computer and can run commands: Claude Code, Codex, Cursor, and similar tools, used through their desktop apps. A regular chatbot website won't work: it can't create files or run anything on your machine. Some lessons use helper agents; if your tool can't start one, the prompt has you open a second session instead.
+Any major AI coding agent that works in a folder on your computer and can run commands: Claude Code, Codex, Cursor, and similar tools, used through their desktop apps. A regular chatbot website won't work: it can't create files or run anything on your machine. Some lessons use subagents; if your tool can't start one, the prompt has you open a second session instead.
 
 ## Recommended listening and reading
 

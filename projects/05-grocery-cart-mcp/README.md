@@ -12,15 +12,15 @@ The AI starts by reading your learning log. Then you'll:
 
 1. Connect Instacart to your agent yourself, read the sign-in consent screen, and learn what MCP and a connector are from the tools it shows up with.
 2. Write a meal plan with a budget, what "done" means for the cart, and an agent permissions policy: what it may do alone, what it must ask about, and what only a human may ever do.
-3. Have a helper agent turn your meal plan into a shopping list, then watch the agent build your real cart. You check it yourself in the Instacart phone app or on its website in your own browser.
+3. Have a subagent (a second agent your agent starts) turn your meal plan into a shopping list, then watch the agent build your real cart. You check it yourself in the Instacart phone app or on its website in your own browser.
 4. Run a prompt injection test: a recipe with a hidden trap in it, given to an agent that doesn't know it's coming. Then you check your cart and remove anything that shouldn't be there.
 5. Break the connection on purpose and read the error.
-6. Check everything against your policy, then have a "red team" agent try to get around it.
+6. Check everything against your policy, then have a red team agent (an agent playing attacker, the security world's version of code review) try to get around it.
 7. Write down what you learned.
 
 The agent never checks out and never asks for your card. Whether to order the cart is up to you.
 
-**No Instacart?** If you'd rather not make an account, it doesn't deliver to you, or the connector won't load in your agent, the AI has a helper write your shopping list instead, and you can build the cart by hand. Or you can build a tiny pretend store on your own computer and shop there, which also shows you how MCP works from the inside.
+**No Instacart?** If you'd rather not make an account, it doesn't deliver to you, or the connector won't load in your agent, the AI has a subagent write your shopping list instead, and you can build the cart by hand. Or you can build a tiny pretend store on your own computer and shop there, which also shows you how MCP works from the inside.
 
 ## How to start
 

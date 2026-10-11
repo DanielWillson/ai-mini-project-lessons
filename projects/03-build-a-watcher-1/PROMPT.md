@@ -9,9 +9,9 @@
 
 ---
 
-This is a learning project. I want to build a small watcher that checks a public data source for things I care about: either **events** (shows near me by artists, teams, or comedians I like) or **class actions** (settlements I could claim, lawsuits against companies I buy from). I'll choose at the start. The tool is not the real goal. The real goal is that by the end I can explain to a friend what an API is, what happens in a request and a response, what HTTP status codes and JSON are, what an API key is, and how to keep a secret out of my code and out of git. On the product side, I want to practise reading documentation and scoping a first version. Act as my teacher and building partner for the next hour and a half to two hours.
+This is a learning project. I want to build a small watcher that checks a public data source for things I care about: either **events** (shows near me by artists, teams, or comedians I like) or **class actions** (settlements I could claim, lawsuits against companies I buy from). I'll choose at the start. The tool is not the real goal. The real goal is that by the end I can explain to a friend what an API is, what happens in a request and a response, what HTTP status codes and JSON are, what an API key is, and how to keep a secret out of my code and out of git. On the product side, I want to practise reading documentation and scoping a first version (an MVP). Act as my teacher and building partner for the next hour and a half to two hours.
 
-I'm pasting this into an AI coding agent, such as Claude Code or Codex. It's written to work in any of them: where it asks for a feature, use your tool's version, or the fallback described.
+I'm pasting this into an AI coding agent such as Claude Code or Codex. Where it asks for a feature, use your tool's version, or the fallback described.
 
 This is Project 3 of 6 in the AI Mini Project Lessons series: https://github.com/danielwillson/ai-mini-project-lessons. Everything you need for this project is in this message, so don't fetch that page on your own. Only look at it if I ask how this project fits with the others or what comes next, or if I'm stuck on setup.
 
@@ -50,6 +50,8 @@ At the end of each stage below, ask me to explain the main idea back to you in m
 
 Whenever a concept has an everyday business equivalent, give it to me. For example: an API is a company's order desk with a printed menu. You can't walk into the kitchen; you fill in the order form the way the menu says, and you get back a tray in a standard layout. An API key is the account number on that order form: it tells the desk who's ordering, so they can set limits and send the bill. If I already know a technical concept well, don't explain it with an analogy; ask me to come up with the business equivalent myself.
 
+Teach me the real vocabulary. You can introduce something with a plain-English name, but then tell me the term people in the industry actually use (a "save point" is a commit; an AI worker you hand a task to is an agent, or subagent), and switch to the real term once I've got the idea. Use it consistently after that, and ask me to use it in my explain-backs so it sticks. For product and business terms, tell me who uses them and that they aren't new or specific to AI: product managers, engineers, designers, and QA testers have used words like acceptance criteria, user stories, and backlog for decades, in tickets, meetings, and job postings. Knowing them is part of being useful on a team from day one.
+
 If I say "just do it for me," you can speed up, but keep the end-of-stage check-ins. They're the part I'm here for.
 
 ## What we're building
@@ -80,7 +82,7 @@ Constraints, both tracks:
 
 ## The stages
 
-**Stage 0: Check in.** Do the steps above, including my track choice, and set your pace.
+**Stage 0: Check in.** Do the steps above, including my track choice, and set your pace. Optionally: "You'll hear me say commit and repo; what's a commit?"
 
 **Stage 1: What an API is.** Before any code, have me open an address in my own web browser, never one built into your tool. Tell me how: copy the address, paste it into my browser's address bar, press Enter. Ask me to guess first what I'll see.
 
@@ -89,24 +91,24 @@ Constraints, both tracks:
 
 Then one idea per message, waiting for my reply after each:
 
-- *Request and response:* my browser sent a request; a server sent a response. An API is that, built for programs.
+- *Request and response:* my browser sent a request; a server sent a response. An API is that, built for programs, and each address it answers at is an **endpoint**.
 - *JSON:* the text format the response came in. If I rated myself 1 or 2 on code, tour what's on my screen: `{ }` holds named fields, each a name in quotes, a colon, then its value; `[ ]` holds a list; these nest. Ask me to find one field and its value.
-- *Status codes:* the four we'll meet today: 200 (OK), 401 (not who you say you are), 404 (no such thing), 429 (too many requests, slow down). Ask why a server would tell a program "slow down" rather than just failing.
+- *Status codes:* the four we'll meet today: 200 (OK), 401 (not who you say you are), 404 (no such thing), 429 (too many requests, slow down). The cap behind a 429 is a **rate limit**. Ask why a server would tell a program "slow down" rather than just failing.
 
-**Stage 2: Read the docs, with a helper.** API docs are long, so hand the reading to a helper, as in Projects 1 and 2. Use a cheap, fast model (Haiku in Claude Code, or your tool's equivalent). If your tool can't start one, have me open a second session here and paste in your brief.
+**Stage 2: Read the docs, with a subagent.** API docs are long, so hand the reading to a subagent, as in Projects 1 and 2. Use a cheap, fast model (Haiku in Claude Code, or your tool's equivalent). If your tool can't start one, have me open a second session here and paste in your brief.
 
-Show me the brief first. It asks for a summary under 250 words: how to get a key, how to send it, rate limits, which response fields we'd print, and any warnings. Plus:
+Show me the brief (the subagent's prompt) first. It asks for a summary under 250 words: how to get a key, how to send it, rate limits, which response fields we'd print, and any warnings. Plus:
 
 - *Events:* docs at `https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/`. Also: searching by keyword and location (city and state, or point and radius; which location parameters are deprecated), the on-sale and presale fields, paging limits, and what the terms say about personal use and storing results.
 - *Class actions:* docs at `https://wiki.free.law/c/courtlistener/help/api/rest/v4/overview`. Also: which address searches court dockets by keyword and date.
 
-Ask me what's missing. Explain why a helper: everything you read fills your working memory (your context window), and whole docs would crowd out the teaching.
+Ask me what's missing. Explain why a subagent: everything you read fills your context window, and whole docs would crowd out the teaching.
 
-Read the summary with me, then have me spend five minutes in the real docs finding one thing it left out or got wrong. Business version: an analyst's memo, and why a good manager still skims the source. Reading docs shows what's possible, what it costs, and the limits before you promise anything.
+Read the summary with me, then have me spend five minutes in the real docs finding one thing it left out or got wrong. Business version: an analyst's memo that a good manager still checks against the source. Reading docs shows what's possible, what it costs, and the limits before you promise anything.
 
-**Stage 3: Scope the first version and decide what "done" means.** Ask what I'd want eventually, then help me pick the smallest slice for today. Write my track on the first line of `SPEC.md`, then three to five acceptance criteria, me drafting, you sharpening. At least one is about secrets, for example: "The API key never appears in any file git tracks, or in the program's output." "It remembers what it showed me" is deliberately left out.
+**Stage 3: Scope the first version and decide what "done" means.** Ask what I'd want eventually, then help me pick the smallest slice for today. That slice is the **MVP** (minimum viable product); the rest is **out of scope**, and letting it creep back in is **scope creep**. Startup and product teams have said this in planning meetings for decades. Write my track on the first line of `SPEC.md`, then three to five acceptance criteria (like the ones on a team's tickets), me drafting, you sharpening. At least one is about secrets, for example: "The API key never appears in any file git tracks, or in the program's output." "It remembers what it showed me" is deliberately out of scope.
 
-**Stage 4: Folder, git, and the file that guards secrets.** Check git and Python work, set up git, and make the first save with `SPEC.md`. Then, before any key exists, create `.gitignore` listing `.env`, the watchlist, and the cached response, and save that too. Ask me to predict why now. (Once a secret is in git history, deleting the file doesn't remove it; anyone with the history has the key.) Create `.env.example` with the variable name and a fake value; it's for git, the real `.env` is not. Show me each new file in its own message.
+**Stage 4: Folder, git, and the file that guards secrets.** Check git and Python work, set up git, and make the first commit with `SPEC.md`. Then, before any key exists, create `.gitignore` listing `.env`, the watchlist, and the cached response, and commit that too. Ask me to predict why now. (Once a **secret** is in the commit history, deleting the file doesn't remove it; anyone with a copy of the repo has the key.) Create `.env.example` with the variable name and a fake value; it's for git, the real `.env` is not. Show me each new file in its own message.
 
 **Stage 5: Turn on the sandbox, then auto mode.** Tell me which permission mode we're in. Then explain the sandbox: a boundary the computer enforces around your commands, limiting which files you can write and which sites you can reach.
 
@@ -116,7 +118,7 @@ Read the summary with me, then have me spend five minutes in the real docs findi
 
 Then, if the sandbox is on and my plan offers it, switch to auto mode (Codex: **Approve for me**). Explain: auto mode decides when to ask me; the sandbox decides what's possible at all. `.gitignore` is a third thing: it protects my key from the world; the sandbox protects my computer from you.
 
-**Stage 6: Get the key, without you touching it.** I sign up myself. You must not create the account, enter any password, or type the key anywhere.
+**Stage 6: Get the key, without you touching it.** I sign up myself. The key is a **secret** (keys, tokens, passwords: **credentials**); the line in `.env` that the program reads it from is an **environment variable**. You must not create the account, enter any password, or type the key anywhere.
 
 - *Events:* at developer.ticketmaster.com, in my own browser. At the time of writing, a default app is created for me, and its "Consumer Key" is the API key (check the current page).
 - *Class actions:* at courtlistener.com; the token is on my profile's API token page (it may allow one account per person; check).
@@ -128,29 +130,29 @@ Then I create `.env` and paste my key in, step by step if I'm new to typing in t
 - *Events:* search by keyword plus my city and state (or point and radius, if supported). The program builds the address with the key from `.env`; never put a keyed address in our chat or print one, even in an error. Sort by on-sale date, soonest first; say "on sale now" if it's passed.
 - *Class actions:* open settlements with a deadline ahead, soonest first; then recent filings per watchlist name.
 
-Tell me in two or three sentences what you built, then stop. Before any code, I run it myself, guessing first what will print: in the terminal pane I type `python3 watcher.py` (Windows: the command that worked in Stage 4, usually `py watcher.py`) and press Enter. I run it again; ask what I notice. (Same things every time; it remembers nothing.)
+Tell me briefly what you built, then stop. Before any code, I run it myself, guessing first what will print: in the terminal pane I type `python3 watcher.py` (Windows: the command that worked in Stage 4, usually `py watcher.py`) and press Enter. I run it again; ask what I notice. (Same things every time; it remembers nothing.)
 
 Then walk me through the code, one idea per message, tying each to what I saw printed: the address and parameters; where the key goes (never its value); the status check; pulling fields from the JSON. If I rated myself 1 or 2 on code, start with a tour of my first Python: `import` borrows a ready-made toolbox, `def` names a set of steps, indentation shows which lines belong together, and `#` starts a note for humans; ask me to find one note. At most about five lines at once, each translated; say what to search for, not line numbers. If I rated myself 4 or 5, skip the tour but still go one idea at a time.
 
-Ask what it would need to say "this is new since yesterday." Don't build that. Make a save point once `git status` shows no `.env` or watchlist.
+Ask what it would need to say "this is new since yesterday." Don't build that. Commit once `git status` shows no `.env` or watchlist.
 
 **Stage 8: Break it on purpose.** Have me change one character of the key in `.env` myself, as in Stage 6 (not you: the key would land in our chat). Ask me to predict the status code, then help me read the 401 and the server's message (at the time of writing, Ticketmaster says "Invalid ApiKey"). Then remove the key; I predict again. CourtListener may answer some searches with no key today (check the docs): never build on a door that happens to be unlocked. If we hit a 429, use it. The program should print a clear, human message for these, without the key, not crash. Then I fix `.env` myself.
 
 **Stage 9: Are we actually done?** Three parts, in this order.
 
 1. *I check.* I check each `SPEC.md` criterion myself by running the program and looking at the files. Don't tell me it passes.
-2. *A skeptic hunts for leaked secrets.* Start a fresh helper that didn't see us build this (or have me open a fresh session) with one job: find any way the key could leak. In code, a tracked file, git history (`git log -p` shows every past change), output or error messages, a printed address; `.env` missing from `.gitignore`; the key sent anywhere but the API's host. It reports specific, checkable claims, and never prints the key.
-3. *I check the skeptic.* Go through its findings one at a time; I verify each before you say what you think.
+2. *A reviewer agent hunts for leaked secrets.* Start a fresh subagent that didn't see us build this (or have me open a fresh session) with one job: find any way the key could leak. In code, a tracked file, git history (`git log -p` shows every past change), output or error messages, a printed address; `.env` missing from `.gitignore`; the key sent anywhere but the API's host. It reports specific, checkable claims, and never prints the key.
+3. *I check the reviewer agent.* Go through its findings one at a time; I verify each before you say what you think.
 
-Explain why a specialist: a general review looks at everything a little; one hunting a single problem looks harder. Scanners find a leaked key in a public repository within minutes. Business version: a dedicated compliance check. If anything leaked, revoke the key on the provider's site and get a new one; a secret in git history is public. Make a save point.
+This is **adversarial review**, like code review and QA on real teams, where nobody merges their own code unreviewed. Explain why a specialist: a general review looks at everything a little; one hunting a single problem looks harder. Scanners find a leaked key in a public repository within minutes. Business version: a dedicated compliance check. If anything leaked, revoke the key on the provider's site and get a new one; a secret in git history is public. Commit.
 
-**Stage 10: Write down what I learned.** Open `LEARNING_LOG.md`. Update "About me." Then add a Project 3 section, starting with which track I chose. For each of these, use my end-of-stage explanation as the first draft, correct me if I'm off, and write my final version: API, request and response, status code, JSON, API key, `.env` and `.gitignore`, reading documentation, scoping a first version, research helper, specialist reviewer, sandbox. For anything I rated 4 or 5, ask a harder question instead and record my answer. Add the business equivalents and anything new under "Things I still don't get." Make a final save point.
+**Stage 10: Write down what I learned.** Open `LEARNING_LOG.md`. Update "About me." Then add a Project 3 section, starting with which track I chose. For each of these, use my end-of-stage explanation as the first draft, correct me if I'm off, and write my final version: API, endpoint, request and response, status code, rate limit, JSON, API key, secret and credentials, environment variable (`.env`) and `.gitignore`, reading documentation, MVP and scope, research subagent, reviewer agent and adversarial review, sandbox. For MVP and scope, note where I'll hear them at work. For anything I rated 4 or 5, ask a harder question instead and record my answer. Add the business equivalents and anything new under "Things I still don't get." Make a final commit.
 
 Finish by telling me what Project 4 is: in this folder, the watcher gets a memory (a small database, to spot what's new) and a daily schedule. We'll also look at why you forget things in a long session, and how a notes file fixes that.
 
 ## Model and usage
 
-This session needs to last about two hours on a standard plan. Run yourself at medium effort; I've been told to set Opus 5.5 at medium in Claude Code, or GPT-6.1 Sol at medium in Codex. If you can tell you're on a much more expensive setting, tell me how to change it before we start. For helpers, use your tool's cheaper model (Sonnet or Haiku in Claude Code, GPT-6 Luna in Codex). If I mention I'm running low on usage, show me where to check how much I have left, and suggest switching you to the cheaper model for the rest of the session. Point out that this is the same budgeting decision a manager makes when choosing who to assign to a job.
+This session needs to last about two hours on a standard plan. Run yourself at medium effort; I've been told to set Opus 5.5 at medium in Claude Code, or GPT-6.1 Sol at medium in Codex. If you can tell you're on a much more expensive setting, tell me how to change it before we start. For subagents, use your tool's cheaper model (Sonnet or Haiku in Claude Code, GPT-6 Luna in Codex). If I mention I'm running low on usage, show me where to check how much I have left, and suggest switching you to the cheaper model for the rest of the session. Point out that this is the same budgeting decision a manager makes when choosing who to assign to a job.
 
 ## A few ground rules
 

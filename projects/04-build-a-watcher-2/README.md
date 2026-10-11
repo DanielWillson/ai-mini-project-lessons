@@ -4,7 +4,7 @@
 
 **You need:** an AI coding agent such as Claude Code or Codex ([setup guide](../../SETUP.md)), and your `my-watcher` folder from Project 3, with its `.env` file and `LEARNING_LOG.md`. No new accounts. You keep the track you chose in Project 3 (events or class actions).
 
-**You'll leave with:** a watcher that remembers what it has seen, tells you only what's new (a show just announced near you, or a new settlement), flags what matters on your private watchlist (such as tickets going on sale this week), and runs every day on its own. Plus a working understanding of databases, scheduled jobs, context windows and AI memory, running several AI helpers at once, epics versus stories, and deciding what not to build.
+**You'll leave with:** a watcher that remembers what it has seen, tells you only what's new (a show just announced near you, or a new settlement), flags what matters on your private watchlist (such as tickets going on sale this week), and runs every day on its own. Plus a working understanding of databases, scheduled jobs, context windows and AI memory, running several AI agents at once (subagents), epics versus stories, and deciding what not to build.
 
 ## What happens
 
@@ -13,7 +13,7 @@ The AI reads your learning log and checks your Project 3 folder. Then you'll:
 1. See how much the AI can hold in mind at once, and give it a memory file.
 2. Turn a big goal into small stories, and choose what not to build.
 3. Design a small database before anything gets built.
-4. Watch two helper agents build and research at the same time, on models picked by cost.
+4. Watch two agents build and research at the same time, on models picked by cost.
 5. Run the watcher twice and see it remember.
 6. Put it on a daily schedule, a step you do with your own hands. If there's time, add a free desktop notification.
 7. Break it on purpose while nobody is watching, and find out where the error went.
@@ -21,7 +21,7 @@ The AI reads your learning log and checks your Project 3 folder. Then you'll:
 9. Start a fresh AI session and see what it remembers.
 10. Write down what you learned.
 
-Your watchlist and the database stay on your computer. They're never saved to git.
+Your watchlist and the database stay on your computer. They're never committed to git.
 
 ## How to start
 
