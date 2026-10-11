@@ -1,0 +1,7 @@
+# Private working notes (original brief and v1 prompt)
+notes/
+prompt-projects-brief.md
+project-1-make-a-game*.md
+
+.claude/
+.DS_Store
