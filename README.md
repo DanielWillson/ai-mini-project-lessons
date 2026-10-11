@@ -4,7 +4,7 @@
 
 A short series of prompts that turn an AI coding agent, such as Claude Code or Codex, into a patient teacher. You make something real, and the AI teaches you how it works as you go. No coding experience needed.
 
-And, a list of recommended resources to read, listen, and learn about AI (scroll to the bottom). 
+Plus a [list of recommended reading and listening](#recommended-listening-and-reading) to keep learning about AI.
 
 ---
 
@@ -97,29 +97,35 @@ Any major AI coding agent that works in a folder on your computer and can run co
 
 ## Recommended listening and reading
 
-Read primary sources from a variety of perspectives. Don't make social media the only way you hear about AI. 
+Read primary sources, from a range of perspectives. Don't let social media be the only way you hear about AI.
 
-### Links
-- Platformer.news, a great weekly newsletter from an excellent technology journalist
-- Product Hunt, the go-to daily resource for new apps, services, and AI tools
+### Stay current
+
+- [Platformer](https://www.platformer.news/): a weekly newsletter on tech and AI from an excellent technology journalist.
+- [Product Hunt](https://www.producthunt.com): the go-to daily list of new apps, services, and AI tools.
 
 ### Model cards
-We strongly recommend reading the model cards put out by the major labs. These are a few, but you should read these as they come out. They'll give perspective on how models are advancing, and what the labs think about them. 
 
-### Ezra Klein's interviews with AI leaders 
-All of these are available on YouTube, the NYT website in an article, or in your podcast app.
+When an AI lab releases a major model, it publishes a **model card** (also called a system card): what the model can do, how it was tested, and what risks the lab found. Read them as they come out. They show how quickly models are advancing, and what the labs themselves think about them. A few recent ones:
 
-These all together give a variety of perspectives on how smart people are thinking about AI and how it will affect the future. 
-- Helen Toner, former OpenAI board member (AI safety, and understanding the Hugging Face hack)
-- Matt Sheehan, senior fellow at the Carnegie Endowment for International Peace (on the "race" with China, and China's perspective on building AI)
-- Bill Gates (from a public health and safety standpoint)
-- Jensen Huang, CEO of NVIDIA (from the perspective of someone building the chips)
-- Arvind Narayanan, CS professor at Princeton (from the perspective of an engineer)
-- David Robinson, former safety researcher at OpenAI (AI safety)
+- [Claude Opus 5.5](https://www.anthropic.com/claude-opus-5-5-system-card) (Anthropic, September 2026)
+- [Claude Fable 5](https://www.anthropic.com/claude-fable-5-system-card) (Anthropic, July 2026)
+- [GPT-6 Astra](https://deploymentsafety.openai.com/gpt-6-astra) (OpenAI, September 2026)
+- [GPT-6.1 Sol](https://deploymentsafety.openai.com/gpt-6-1-sol) (OpenAI, September 2026)
 
+### Ezra Klein's interviews with AI leaders
+
+Together, these show how a range of smart people think about AI and how it will shape the future. Each one is on YouTube, on the New York Times site as a transcript, and in your podcast app.
+
+- **Helen Toner**, former OpenAI board member, on AI safety and the Hugging Face hack. [Watch](https://www.youtube.com/watch?v=locKEKxG3os) · [Read](https://www.nytimes.com/2026/08/18/opinion/ezra-klein-podcast-helen-toner.html?unlocked_article_code=1.H1E.Mlmv.wcn9f7btxY8q&smid=url-share)
+- **Matt Sheehan**, senior fellow at the Carnegie Endowment for International Peace, on the "race" with China and how China sees building AI. [Watch](https://www.youtube.com/watch?v=U2O0sdpuFRQ) · [Read](https://www.nytimes.com/2026/09/15/opinion/ezra-klein-podcast-matt-sheehan.html?unlocked_article_code=1.H1E.AILG.Pd5toF5mgzUo&smid=url-share)
+- **Jensen Huang**, CEO of NVIDIA, from the perspective of someone building the chips. [Watch](https://www.youtube.com/watch?v=HjurAWAr_nY) · [Read](https://www.nytimes.com/2026/09/23/opinion/ezra-klein-podcast-jensen-huang.html?unlocked_article_code=1.H1E.tx74.0wVkj6oaBHht&smid=url-share)
+- **Bill Gates**, from a public health and safety standpoint. [Watch](https://www.youtube.com/watch?v=A_156w0aYtU) · [Read](https://www.nytimes.com/2026/09/29/opinion/ezra-klein-podcast-bill-gates.html?unlocked_article_code=1.H1E.aYlF.YXNY-Lz_vFP5&smid=url-share)
+- **David Robinson**, former safety researcher at OpenAI, on AI safety. [Watch](https://www.youtube.com/watch?v=JIMXEuT_ZAU) · [Read](https://www.nytimes.com/2026/10/07/opinion/ezra-klein-podcast-david-robinson.html?unlocked_article_code=1.H1E.Nb0s.-jttPNfnYWIA&smid=url-share)
+- **Arvind Narayanan**, computer science professor at Princeton, from the perspective of an engineer. [Watch](https://www.youtube.com/watch?v=PoDop1H64-s) · [Read](https://www.nytimes.com/2026/10/09/opinion/ezra-klein-podcast-arvind-narayanan.html?unlocked_article_code=1.H1E.vsAI.LWynixcnjbEZ&smid=url-share)
 
 ## Who made this
 
-Daniel Willson and Andy Page, as the take-home for their guest lecture on building with AI in UVA entrepreneurship courses.
+[Daniel Willson](https://www.linkedin.com/in/danielwillson) and [Andy Page](https://www.linkedin.com/in/andrewlpage/), as the take-home for their guest lecture on building with AI in UVA entrepreneurship courses.
 
 Feedback is welcome. If something confused you, broke, or took far longer than it should have, please [open an issue](../../issues).
