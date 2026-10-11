@@ -4,6 +4,8 @@
 
 A short series of prompts that turn an AI coding agent, such as Claude Code or Codex, into a patient teacher. You make something real, and the AI teaches you how it works as you go. No coding experience needed.
 
+And, a list of recommended resources to read, listen, and learn about AI (scroll to the bottom). 
+
 ---
 
 ## What this is
@@ -95,19 +97,26 @@ Any major AI coding agent that works in a folder on your computer and can run co
 
 ## Recommended listening and reading
 
-Optional, but worth your time if you want to go deeper.
+Read primary sources from a variety of perspectives. Don't make social media the only way you hear about AI. 
 
-### Articles
+### Links
+- Platformer.news, a great weekly newsletter from an excellent technology journalist
+- Product Hunt, the go-to daily resource for new apps, services, and AI tools
 
-*Coming soon.*
+### Model cards
+We strongly recommend reading the model cards put out by the major labs. These are a few, but you should read these as they come out. They'll give perspective on how models are advancing, and what the labs think about them. 
 
-### Videos
+### Ezra Klein's interviews with AI leaders 
+All of these are available on YouTube, the NYT website in an article, or in your podcast app.
 
-*Coming soon.*
+These all together give a variety of perspectives on how smart people are thinking about AI and how it will affect the future. 
+- Helen Toner, former OpenAI board member (AI safety, and understanding the Hugging Face hack)
+- Matt Sheehan, senior fellow at the Carnegie Endowment for International Peace (on the "race" with China, and China's perspective on building AI)
+- Bill Gates (from a public health and safety standpoint)
+- Jensen Huang, CEO of NVIDIA (from the perspective of someone building the chips)
+- Arvind Narayanan, CS professor at Princeton (from the perspective of an engineer)
+- David Robinson, former safety researcher at OpenAI (AI safety)
 
-### Podcasts
-
-*Coming soon.*
 
 ## Who made this
 
